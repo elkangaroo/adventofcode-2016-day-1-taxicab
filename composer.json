@@ -1,0 +1,16 @@
+{
+    "name": "elkangaroo/adventofcode-2016-day-1-taxicab",
+    "type": "project",
+    "require": {
+        "phpunit/phpunit": "~5.7.0"
+    },
+    "autoload": {
+        "psr-4": { "Advent\\": "src/" }
+    },
+    "authors": [
+        {
+            "name": "Alexander Wenzel",
+            "email": "elkangaroo@gmail.com"
+        }
+    ]
+}
