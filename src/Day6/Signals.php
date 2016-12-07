@@ -13,12 +13,9 @@ class Signals
         $signals = [];
 
         foreach (explode(PHP_EOL, $input) as $line) {
-            $signals[0] .= $line[0];
-            $signals[1] .= $line[1];
-            $signals[2] .= $line[2];
-            $signals[3] .= $line[3];
-            $signals[4] .= $line[4];
-            $signals[5] .= $line[5];
+            $signals = array_map(function($a, $b) {
+                return $a . $b; 
+            }, $signals, str_split($line));
         }
 
         $decoded = array_map(function($line) {
