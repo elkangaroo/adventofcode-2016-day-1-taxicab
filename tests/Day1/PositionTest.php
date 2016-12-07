@@ -1,6 +1,6 @@
 <?php
 
-use Advent\Position;
+use Advent\Day1\Position;
 
 class PositionTest extends PHPUnit_Framework_TestCase
 {

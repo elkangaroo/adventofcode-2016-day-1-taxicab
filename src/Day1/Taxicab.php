@@ -1,6 +1,6 @@
 <?php
 
-namespace Advent;
+namespace Advent\Day1;
 
 class Taxicab
 {

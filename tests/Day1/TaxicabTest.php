@@ -1,6 +1,6 @@
 <?php
 
-use Advent\Taxicab;
+use Advent\Day1\Taxicab;
 
 class TaxicabTest extends PHPUnit_Framework_TestCase
 {
