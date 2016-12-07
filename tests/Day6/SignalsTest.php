@@ -32,7 +32,8 @@ dvrsen
 enarar
 EOT;
 
-        $this->assertEquals('easter', $this->signals->decode($input));
+        $this->assertEquals('easter', $this->signals->decode($input, 'arsort'));
+        $this->assertEquals('advent', $this->signals->decode($input, 'asort'));
     }
 
     public function testDecode_Puzzle()
@@ -664,7 +665,8 @@ mviznnhr
 islgcrgm
 EOT;
 
-        $this->assertEquals('gebzfnbt', $this->signals->decode($input));
+        $this->assertEquals('gebzfnbt', $this->signals->decode($input, 'arsort'));
+        $this->assertEquals('fykjtwyn', $this->signals->decode($input, 'asort'));
     }
 }
 

@@ -6,9 +6,10 @@ class Signals
 {
     /**
      * @param string $input
+     * @param callable $sort
      * @return string
      */
-    public function decode($input)
+    public function decode($input, callable $sort)
     {
         $signals = [];
 
@@ -18,9 +19,9 @@ class Signals
             }, $signals, str_split($line));
         }
 
-        $decoded = array_map(function($line) {
+        $decoded = array_map(function($line) use ($sort) {
             $chars = count_chars($line, 1);
-            arsort($chars);
+            $sort($chars);
 
             return chr(key($chars));
         }, $signals);
