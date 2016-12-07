@@ -10,7 +10,7 @@ class Taxicab
      */
     public function calculateShortestPath($directions)
     {
-        $position = new Position();
+        $position = new Position(0, 0);
 
         $directions = explode(', ', $directions);
         foreach ($directions as $direction) {
@@ -27,7 +27,7 @@ class Taxicab
             }
         }
 
-        return abs($position->getX()) + abs($position->getY());
+        return abs($position->getX() - 0) + abs($position->getY() - 0);
     }
 }
 
